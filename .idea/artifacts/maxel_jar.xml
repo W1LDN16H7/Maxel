@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="maxel:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/maxel_jar</output-path>
+    <root id="archive" name="maxel.jar">
+      <element id="module-output" name="maxel" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/MathParser.org-mXparser-v.4.4.0-jdk11.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
