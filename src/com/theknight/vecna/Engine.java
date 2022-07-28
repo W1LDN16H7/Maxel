@@ -1,12 +1,13 @@
 package com.theknight.vecna;
 
+import com.theknight.max.maxi;
 import org.mariuszgromada.math.mxparser.Expression;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Engine implements Runnable {
+public class Engine implements Runnable, maxi {
     private String value;
 
     public Engine() {
@@ -61,9 +62,26 @@ public class Engine implements Runnable {
     @Override
     public String evaluate(String input) {
         Expression exp = new Expression(input);
-        String result =  String.valueOf(exp.calculate());
-        return result;
+        int res2 = 0;
+        double res = exp.calculate();
+        if (isInteger(res)) {
+            res2 = (int) res;
+            return String.valueOf(res2);
+        } else {
+            return String.valueOf(res);
+        }
     }
 
 
+    /**
+     * Return true if the given double is a valid Integer.
+     *
+     * @param value
+     * @return
+     */
+    @Override
+    public boolean isInteger(Double value) {
+        return value.intValue() == value;
+
+    }
 }

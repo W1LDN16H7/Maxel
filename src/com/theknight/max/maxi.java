@@ -1,7 +1,15 @@
 package com.theknight.max;
 
-public class maxi {
-    public static void main(String[] args) {
+public interface maxi  {
 
-    }
+    /**
+     * Return true if the given double is a valid Integer.
+     * @param value
+     * @return
+     */
+
+    boolean isInteger(Double value);
+
+
+
 }
